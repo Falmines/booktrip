@@ -1,4 +1,8 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "http://localhost:5000/api"
+    : "https://booktrip-flame.vercel.app/api";
+
 const token = localStorage.getItem("token");
 const orderList = document.getElementById("orderList");
 

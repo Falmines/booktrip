@@ -421,6 +421,22 @@ app.get("/api/cars", async (req, res) => {
   res.json(result.rows);
 });
 
+app.get("/api/cars", async (req, res) => {
+  const result = await db.query("SELECT * FROM cars ORDER BY id DESC");
+  res.json(result.rows);
+});
+
+app.post("/api/cars/search", async (req, res) => {
+  const { city } = req.body;
+
+  const result = await db.query(
+    "SELECT * FROM cars WHERE city ILIKE $1 AND status = 'available' ORDER BY price_per_day ASC",
+    [`%${city}%`]
+  );
+
+  res.json(result.rows);
+});
+
 app.get("/api/cars/:id", async (req, res) => {
   const result = await db.query(
     "SELECT * FROM cars WHERE id = $1",
