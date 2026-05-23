@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel - BookTrip</title>
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+
+  <div class="top-actions">
+    <span id="userInfo">Guest</span>
+    <button id="loginBtn">Masuk / Daftar</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="tiket-pesawat.html">✈ Tiket Pesawat</a>
+  <a href="hotel.html" class="active">🏨 Hotel</a>
+  <a href="kereta-api.html">🚆 Kereta Api</a>
+  <a href="bus-travel.html">🚌 Bus & Travel</a>
+  <a href="promo.html">🔥 Promo</a>
+  <a href="xperience.html">🎡 Xperience</a>
+  <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+  <a href="asuransi.html">🛡 Asuransi</a>
+  <a href="pesanan.html">🧾 Pesanan Saya</a>
+</nav>
+
+<section class="hotel-hero">
+  <div>
+    <h1>Temukan Hotel Terbaik</h1>
+    <p>Booking hotel nyaman dengan harga terbaik untuk liburan, bisnis, dan staycation.</p>
+  </div>
+</section>
+
+<section class="hotel-search">
+  <h2>Cari Hotel</h2>
+
+  <form id="hotelForm" class="hotel-form">
+    <div class="form-group">
+      <label>Kota / Destinasi</label>
+      <input type="text" id="city" value="Bali" required>
+    </div>
+
+    <div class="form-group">
+      <label>Check-in</label>
+      <input type="date" id="checkin" required>
+    </div>
+
+    <div class="form-group">
+      <label>Check-out</label>
+      <input type="date" id="checkout" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tamu</label>
+      <select id="guests">
+        <option value="1">1 Tamu</option>
+        <option value="2">2 Tamu</option>
+        <option value="4">4 Tamu</option>
+        <option value="6">6 Tamu</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Kamar</label>
+      <select id="rooms">
+        <option value="1">1 Kamar</option>
+        <option value="2">2 Kamar</option>
+        <option value="3">3 Kamar</option>
+      </select>
+    </div>
+
+    <button type="submit" class="search-btn">Cari Hotel</button>
+  </form>
+</section>
+
+<section class="filter-section">
+  <button class="filter-btn active" data-star="all">Semua</button>
+  <button class="filter-btn" data-star="5">⭐ 5</button>
+  <button class="filter-btn" data-star="4">⭐ 4</button>
+  <button class="filter-btn" data-star="3">⭐ 3</button>
+</section>
+
+<section class="result-section">
+  <div class="result-header">
+    <h2>Rekomendasi Hotel</h2>
+
+    <select id="sortHotel">
+      <option value="recommended">Rekomendasi</option>
+      <option value="cheap">Termurah</option>
+      <option value="expensive">Termahal</option>
+      <option value="rating">Rating Tertinggi</option>
+    </select>
+  </div>
+
+  <div class="hotel-results" id="hotelResults"></div>
+</section>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <button class="close-modal" id="closeLogin">×</button>
+
+    <h2>Masuk Akun</h2>
+    <p>Login agar bisa checkout dan pembayaran.</p>
+
+    <input type="email" id="emailLogin" placeholder="Email">
+    <input type="password" id="passwordLogin" placeholder="Password">
+
+    <button class="login-submit" id="submitLogin">Masuk</button>
+    <button class="register-btn" id="registerBtn">Daftar Akun Baru</button>
+  </div>
+</div>
+
+<script src="hotel.js"></script>
+</body>
+</html>

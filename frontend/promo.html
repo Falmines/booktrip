@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promo - BookTrip</title>
+  <link rel="stylesheet" href="promo.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+
+  <div class="top-actions">
+    <span id="userInfo">Guest</span>
+    <button id="loginBtn">Masuk / Daftar</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="tiket-pesawat.html">✈ Tiket Pesawat</a>
+  <a href="hotel.html">🏨 Hotel</a>
+  <a href="kereta-api.html">🚆 Kereta Api</a>
+  <a href="bus-travel.html">🚌 Bus & Travel</a>
+  <a href="promo.html" class="active">🔥 Promo</a>
+  <a href="xperience.html">🎡 Xperience</a>
+  <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+  <a href="asuransi.html">🛡 Asuransi</a>
+  <a href="pesanan.html">🧾 Pesanan Saya</a>
+</nav>
+
+<section class="promo-hero">
+  <div>
+    <span class="badge">PROMO SPESIAL</span>
+    <h1>Diskon Besar untuk Perjalananmu</h1>
+    <p>Nikmati voucher tiket pesawat, hotel, kereta, bus, dan sewa mobil dengan harga lebih hemat.</p>
+  </div>
+</section>
+
+<section class="promo-search">
+  <h2>Cari Promo</h2>
+
+  <div class="search-row">
+    <input type="text" id="searchPromo" placeholder="Cari promo, contoh: hotel, pesawat, cashback...">
+
+    <select id="sortPromo">
+      <option value="recommended">Rekomendasi</option>
+      <option value="biggest">Diskon Terbesar</option>
+      <option value="latest">Terbaru</option>
+    </select>
+  </div>
+</section>
+
+<section class="filter-section">
+  <button class="filter-btn active" data-category="all">Semua</button>
+  <button class="filter-btn" data-category="Pesawat">✈ Pesawat</button>
+  <button class="filter-btn" data-category="Hotel">🏨 Hotel</button>
+  <button class="filter-btn" data-category="Kereta">🚆 Kereta</button>
+  <button class="filter-btn" data-category="Bus">🚌 Bus</button>
+  <button class="filter-btn" data-category="Mobil">🚗 Mobil</button>
+</section>
+
+<section class="result-section">
+  <div class="result-header">
+    <h2>Promo Tersedia</h2>
+    <span id="promoCount">0 promo</span>
+  </div>
+
+  <div class="promo-results" id="promoResults"></div>
+</section>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <button class="close-modal" id="closeLogin">×</button>
+
+    <h2>Masuk Akun</h2>
+    <p>Login agar bisa klaim promo dan checkout.</p>
+
+    <input type="email" id="emailLogin" placeholder="Email">
+    <input type="password" id="passwordLogin" placeholder="Password">
+
+    <button class="login-submit" id="submitLogin">Masuk</button>
+    <button class="register-btn" id="registerBtn">Daftar Akun Baru</button>
+  </div>
+</div>
+
+<script src="promo.js"></script>
+</body>
+</html>

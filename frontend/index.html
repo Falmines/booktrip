@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BookTrip Clone</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="logo">✈ BookTrip</div>
+
+    <div class="top-actions">
+      <span>IDR⌄</span>
+      <span>Bantuan</span>
+      <span>Pesanan Saya</span>
+      <button id="loginBtn">Masuk / Daftar</button>
+    </div>
+  </header>
+
+  <!-- NAVBAR MENU -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="active">🏠 Beranda</a>
+    <a href="checkout.html">🧾 Checkout</a>
+    <a href="payment.html">💳 Pembayaran</a>
+    <a href="tiket-pesawat.html">✈ Tiket Pesawat</a>
+    <a href="hotel.html">🏨 Hotel</a>
+    <a href="kereta-api.html">🚆 Kereta Api</a>
+    <a href="bus-travel.html">🚌 Bus & Travel</a>
+    <a href="promo.html">🔥 Promo</a>
+    <a href="xperience.html">🎡 Xperience</a>
+    <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+    <a href="asuransi.html">🛡 Asuransi</a>
+  </nav>
+
+  <!-- MOBILE MENU BUTTON -->
+  <button class="hamburger" id="hamburgerBtn">☰</button>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Temukan Perjalanan Terbaik<br>
+        untuk Momen Tak Terlupakan
+      </h1>
+
+      <p>
+        Pesan tiket pesawat, hotel, kereta, bus, dan berbagai kebutuhan
+        perjalananmu dalam satu tempat.
+      </p>
+
+      <div class="features">
+        <span>🛡 Harga Terbaik</span>
+        <span>💳 Pembayaran Aman</span>
+        <span>⏰ Layanan 24/7</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH BOX -->
+  <section class="search-box">
+<div class="tabs">
+  <button type="button" class="tab active" onclick="changeTab('flights', this)">✈ Tiket Pesawat</button>
+  <button type="button" class="tab" onclick="changeTab('hotels', this)">🏨 Hotel</button>
+  <button type="button" class="tab" onclick="changeTab('trains', this)">🚆 Kereta Api</button>
+  <button type="button" class="tab" onclick="changeTab('buses', this)">🚌 Bus & Travel</button>
+  <button type="button" class="tab" onclick="changeTab('cars', this)">🚗 Sewa Mobil</button>
+</div>
+</div>
+  <form class="form-grid" id="searchForm">
+    <div class="input-card">
+      <small>Dari</small>
+      <input type="text" id="origin" placeholder="Jakarta / CGK">
+    </div>
+
+    <button type="button" class="swap" id="swapBtn">⇄</button>
+
+    <div class="input-card">
+      <small>Ke</small>
+      <input type="text" id="destination" placeholder="Bali / DPS">
+    </div>
+
+    <div class="input-card">
+      <small>Tanggal Berangkat</small>
+      <input type="date" id="departureDate">
+    </div>
+
+    <div class="input-card">
+      <small>Tanggal Pulang</small>
+      <input type="date" id="returnDate">
+    </div>
+
+    <div class="input-card">
+      <small>Penumpang / Kamar</small>
+      <input type="number" id="passenger" value="1" min="1">
+    </div>
+
+    <button type="button" class="search-btn" id="searchBtn">
+  🔍 Cari
+</button>
+  </form>
+
+  <div class="result-grid" id="searchResult"></div>
+</section>
+
+  <!-- BENEFIT BAR -->
+  <section class="benefit-bar">
+    <div>
+      💙 <b>Gratis Refund</b>
+      <span>S&K berlaku</span>
+    </div>
+
+    <div>
+      📅 <b>Ubah Jadwal Fleksibel</b>
+      <span>Tanpa biaya tambahan</span>
+    </div>
+
+    <div>
+      ✈ <b>Banyak Pilihan Maskapai</b>
+      <span>Domestik & Internasional</span>
+    </div>
+
+    <div>
+      💳 <b>PayLater & Cicilan 0%</b>
+      <span>Tersedia untukmu</span>
+    </div>
+
+    <div>
+      🎁 <b>Poin Rewards</b>
+      <span>Kumpulkan dan tukarkan</span>
+    </div>
+  </section>
+
+  <!-- DESTINASI POPULER -->
+  <section class="container">
+    <div class="section-title">
+      <h2>Destinasi Populer</h2>
+      <a href="tiket-pesawat.html">Lihat Semua →</a>
+    </div>
+
+    <div class="destination-grid" id="destinationGrid">
+      <!-- DATA DARI DATABASE -->
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section class="promo">
+    <div>
+      <h3>Diskon Spesial untuk Perjalananmu!</h3>
+      <p>Dapatkan diskon hingga 50% untuk berbagai rute pilihan.</p>
+    </div>
+
+    <div class="coupon">
+      <small>Kode Promo:</small>
+      <b>BOOKTRIP50</b>
+    </div>
+
+    <button onclick="window.location.href='promo.html'">
+      Lihat Promo →
+    </button>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="container">
+    <h2>Kenapa Memilih BookTrip?</h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        🏅
+        <b>Harga Terbaik</b>
+        <p>Kami jamin harga terbaik dibanding yang lain.</p>
+      </div>
+
+      <div class="why-card">
+        🚆
+        <b>Banyak Pilihan</b>
+        <p>Ribuan pilihan transportasi dan akomodasi.</p>
+      </div>
+
+      <div class="why-card">
+        🛡
+        <b>Transaksi Aman</b>
+        <p>Sistem pembayaran aman dan terpercaya.</p>
+      </div>
+
+      <div class="why-card">
+        🎧
+        <b>Layanan 24/7</b>
+        <p>Customer service siap membantumu kapan saja.</p>
+      </div>
+
+      <div class="why-card">
+        ⚡
+        <b>Mudah & Cepat</b>
+        <p>Pesan dalam hitungan menit kapan pun.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL LOGIN -->
+ <div class="modal" id="loginModal">
+
+  <div class="modal-box">
+
+    <button type="button" class="close-modal" id="closeLogin">
+      ×
+    </button>
+
+    <h2>Masuk Akun</h2>
+
+    <p>
+      Login agar bisa melakukan checkout dan pembayaran.
+    </p>
+
+    <input
+      type="email"
+      id="emailLogin"
+      placeholder="Email"
+    >
+
+    <input
+      type="password"
+      id="passwordLogin"
+      placeholder="Password"
+    >
+
+    <button
+      type="button"
+      class="login-submit"
+      id="submitLogin"
+    >
+      Masuk
+    </button>
+
+    <button
+      type="button"
+      class="register-btn"
+      id="registerBtn"
+    >
+      Daftar Akun Baru
+    </button>
+
+  </div>
+
+</div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>

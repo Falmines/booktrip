@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xperience - BookTrip</title>
+  <link rel="stylesheet" href="xperience.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+
+  <div class="top-actions">
+    <span id="userInfo">Guest</span>
+    <button id="loginBtn">Masuk / Daftar</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="tiket-pesawat.html">✈ Tiket Pesawat</a>
+  <a href="hotel.html">🏨 Hotel</a>
+  <a href="kereta-api.html">🚆 Kereta Api</a>
+  <a href="bus-travel.html">🚌 Bus & Travel</a>
+  <a href="promo.html">🔥 Promo</a>
+  <a href="xperience.html" class="active">🎡 Xperience</a>
+  <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+  <a href="asuransi.html">🛡 Asuransi</a>
+  <a href="pesanan.html">🧾 Pesanan Saya</a>
+</nav>
+
+<section class="xperience-hero">
+  <div>
+    <span class="badge">BOOKTRIP XPERIENCE</span>
+    <h1>Temukan Aktivitas Seru di Destinasi Favoritmu</h1>
+    <p>Pesan tiket wisata, theme park, tour, spa, hingga aktivitas liburan lainnya dengan mudah.</p>
+  </div>
+</section>
+
+<section class="xp-search">
+  <h2>Cari Xperience</h2>
+
+  <div class="search-row">
+    <input type="text" id="searchXp" placeholder="Cari aktivitas, contoh: Bali, tour, waterpark...">
+
+    <select id="sortXp">
+      <option value="recommended">Rekomendasi</option>
+      <option value="cheap">Termurah</option>
+      <option value="expensive">Termahal</option>
+      <option value="rating">Rating Tertinggi</option>
+    </select>
+  </div>
+</section>
+
+<section class="filter-section">
+  <button class="filter-btn active" data-category="all">Semua</button>
+  <button class="filter-btn" data-category="Theme Park">🎢 Theme Park</button>
+  <button class="filter-btn" data-category="Tour">🧭 Tour</button>
+  <button class="filter-btn" data-category="Waterpark">🌊 Waterpark</button>
+  <button class="filter-btn" data-category="Spa">💆 Spa</button>
+  <button class="filter-btn" data-category="Museum">🏛 Museum</button>
+</section>
+
+<section class="result-section">
+  <div class="result-header">
+    <h2>Aktivitas Populer</h2>
+    <span id="xpCount">0 aktivitas</span>
+  </div>
+
+  <div class="xp-results" id="xpResults"></div>
+</section>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <button class="close-modal" id="closeLogin">×</button>
+
+    <h2>Masuk Akun</h2>
+    <p>Login agar bisa checkout dan pembayaran.</p>
+
+    <input type="email" id="emailLogin" placeholder="Email">
+    <input type="password" id="passwordLogin" placeholder="Password">
+
+    <button class="login-submit" id="submitLogin">Masuk</button>
+    <button class="register-btn" id="registerBtn">Daftar Akun Baru</button>
+  </div>
+</div>
+
+<script src="xperience.js"></script>
+</body>
+</html>

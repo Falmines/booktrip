@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sewa Mobil - BookTrip</title>
+  <link rel="stylesheet" href="sewa-mobil.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="tiket-pesawat.html">✈ Tiket Pesawat</a>
+  <a href="hotel.html">🏨 Hotel</a>
+  <a href="kereta-api.html">🚆 Kereta Api</a>
+  <a href="bus-travel.html">🚌 Bus & Travel</a>
+  <a href="promo.html">🔥 Promo</a>
+  <a href="xperience.html">🎡 Xperience</a>
+  <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+  <a href="asuransi.html">🛡 Asuransi</a>
+</nav>
+
+<section class="car-hero">
+  <div>
+    <h1>Sewa Mobil Mudah & Cepat</h1>
+    <p>Pilih mobil terbaik untuk liburan, perjalanan bisnis, atau kebutuhan harianmu.</p>
+  </div>
+</section>
+
+<section class="car-search">
+  <h2>Cari Sewa Mobil</h2>
+
+  <form id="carForm" class="car-form">
+    <div class="form-group">
+      <label>Kota Pengambilan</label>
+      <input type="text" id="city" value="Jakarta" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tanggal Mulai</label>
+      <input type="date" id="startDate" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tanggal Selesai</label>
+      <input type="date" id="endDate" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tipe Layanan</label>
+      <select id="serviceType">
+        <option>Lepas Kunci</option>
+        <option>Dengan Sopir</option>
+        <option>Antar Jemput Bandara</option>
+      </select>
+    </div>
+
+    <button type="submit" class="search-btn">Cari Mobil</button>
+  </form>
+</section>
+
+<section class="filter-section">
+  <button class="filter-btn active" data-type="all">Semua</button>
+  <button class="filter-btn" data-type="MPV">MPV</button>
+  <button class="filter-btn" data-type="SUV">SUV</button>
+  <button class="filter-btn" data-type="City Car">City Car</button>
+  <button class="filter-btn" data-type="Luxury">Luxury</button>
+</section>
+
+<section class="result-section">
+  <div class="result-header">
+    <h2>Mobil Tersedia</h2>
+
+    <select id="sortCar">
+      <option value="recommended">Rekomendasi</option>
+      <option value="cheap">Termurah</option>
+      <option value="expensive">Termahal</option>
+      <option value="seat">Kapasitas Terbesar</option>
+    </select>
+  </div>
+
+  <div class="car-results" id="carResults"></div>
+</section>
+
+<script src="sewa-mobil.js"></script>
+</body>
+</html>

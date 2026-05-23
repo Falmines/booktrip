@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kereta Api - BookTrip</title>
+  <link rel="stylesheet" href="kereta-api.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+
+  <div class="top-actions">
+    <span id="userInfo">Guest</span>
+    <button id="loginBtn">Masuk / Daftar</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="tiket-pesawat.html">✈ Tiket Pesawat</a>
+  <a href="hotel.html">🏨 Hotel</a>
+  <a href="kereta-api.html" class="active">🚆 Kereta Api</a>
+  <a href="bus-travel.html">🚌 Bus & Travel</a>
+  <a href="promo.html">🔥 Promo</a>
+  <a href="xperience.html">🎡 Xperience</a>
+  <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+  <a href="asuransi.html">🛡 Asuransi</a>
+  <a href="pesanan.html">🧾 Pesanan Saya</a>
+</nav>
+
+<section class="train-hero">
+  <div>
+    <h1>Cari Tiket Kereta Api</h1>
+    <p>Pesan tiket kereta api dengan mudah, cepat, dan harga terbaik untuk perjalananmu.</p>
+  </div>
+</section>
+
+<section class="train-search">
+  <h2>Pesan Tiket Kereta</h2>
+
+  <form id="trainForm" class="train-form">
+    <div class="form-group">
+      <label>Stasiun Asal</label>
+      <input type="text" id="fromStation" value="Gambir" required>
+    </div>
+
+    <button type="button" class="swap-btn" id="swapBtn">⇄</button>
+
+    <div class="form-group">
+      <label>Stasiun Tujuan</label>
+      <input type="text" id="toStation" value="Yogyakarta" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tanggal Berangkat</label>
+      <input type="date" id="departDate" required>
+    </div>
+
+    <div class="form-group">
+      <label>Penumpang</label>
+      <select id="passenger">
+        <option value="1">1 Dewasa</option>
+        <option value="2">2 Dewasa</option>
+        <option value="3">3 Dewasa</option>
+        <option value="4">1 Dewasa, 1 Anak</option>
+      </select>
+    </div>
+
+    <button type="submit" class="search-btn">Cari Kereta</button>
+  </form>
+</section>
+
+<section class="filter-section">
+  <button class="filter-btn active" data-class="all">Semua</button>
+  <button class="filter-btn" data-class="Ekonomi">Ekonomi</button>
+  <button class="filter-btn" data-class="Bisnis">Bisnis</button>
+  <button class="filter-btn" data-class="Eksekutif">Eksekutif</button>
+</section>
+
+<section class="result-section">
+  <div class="result-header">
+    <h2>Jadwal Kereta Tersedia</h2>
+
+    <select id="sortTrain">
+      <option value="cheap">Termurah</option>
+      <option value="early">Berangkat Paling Awal</option>
+      <option value="fast">Durasi Tercepat</option>
+    </select>
+  </div>
+
+  <div class="train-results" id="trainResults"></div>
+</section>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <button class="close-modal" id="closeLogin">×</button>
+
+    <h2>Masuk Akun</h2>
+    <p>Login agar bisa checkout dan pembayaran.</p>
+
+    <input type="email" id="emailLogin" placeholder="Email">
+    <input type="password" id="passwordLogin" placeholder="Password">
+
+    <button class="login-submit" id="submitLogin">Masuk</button>
+    <button class="register-btn" id="registerBtn">Daftar Akun Baru</button>
+  </div>
+</div>
+
+<script src="kereta-api.js"></script>
+</body>
+</html>

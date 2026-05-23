@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pembayaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+  <div class="top-actions">
+    <a href="index.html">Beranda</a>
+  </div>
+</header>
+
+<section class="container">
+  <h2>Pembayaran</h2>
+
+  <div class="checkout-card">
+    <h3>Detail Pesanan</h3>
+    <p>ID Booking: <b id="bookingId"></b></p>
+    <p>Status: <b id="bookingStatus"></b></p>
+    <h2 id="paymentTotal">Rp 0</h2>
+
+    <hr>
+
+    <h3>Pilih Metode Pembayaran</h3>
+
+    <select id="paymentMethod">
+      <option value="">Pilih metode</option>
+      <option value="Transfer Bank">Transfer Bank</option>
+      <option value="Virtual Account">Virtual Account</option>
+      <option value="QRIS">QRIS</option>
+      <option value="E-Wallet">E-Wallet</option>
+    </select>
+
+    <button class="search-btn" id="payBtn">
+      Bayar Sekarang
+    </button>
+  </div>
+</section>
+
+<script src="payment.js"></script>
+</body>
+</html>

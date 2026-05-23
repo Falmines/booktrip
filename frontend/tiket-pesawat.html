@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tiket Pesawat - BookTrip</title>
+
+  <link rel="stylesheet" href="tiket-pesawat.css" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+<header class="topbar">
+
+  <div class="logo">
+    ✈ BookTrip
+  </div>
+
+  <div class="top-actions">
+
+    <span id="userInfo">
+      Guest
+    </span>
+
+    <button id="loginBtn">
+      Masuk / Daftar
+    </button>
+
+  </div>
+
+</header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="tiket-pesawat.html" class="active">✈ Tiket Pesawat</a>
+    <a href="hotel.html">🏨 Hotel</a>
+    <a href="kereta-api.html">🚆 Kereta Api</a>
+    <a href="bus-travel.html">🚌 Bus & Travel</a>
+    <a href="promo.html">🔥 Promo</a>
+    <a href="xperience.html">🎡 Xperience</a>
+    <a href="sewa-mobil.html">🚗 Sewa Mobil</a>
+    <a href="asuransi.html">🛡 Asuransi</a>
+    <a href="pesanan.html">🧾 Pesanan Saya</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="flight-hero">
+    <div>
+      <h1>Cari Tiket Pesawat Terbaik</h1>
+      <p>Bandingkan harga tiket pesawat murah dari berbagai maskapai dalam satu tempat.</p>
+    </div>
+  </section>
+
+  <!-- SEARCH FORM -->
+  <section class="flight-search">
+    <h2>Pesan Tiket Pesawat</h2>
+
+    <div class="trip-options">
+      <label>
+        <input type="radio" name="trip" value="oneway" checked>
+        Sekali Jalan
+      </label>
+
+      <label>
+        <input type="radio" name="trip" value="roundtrip">
+        Pulang Pergi
+      </label>
+
+      <label>
+        <input type="radio" name="trip" value="multicity">
+        Multi-city
+      </label>
+    </div>
+
+    <form id="flightForm" class="flight-form">
+
+      <div class="form-group">
+        <label>Dari</label>
+        <input
+          type="text"
+          id="fromCity"
+          name="origin"
+          placeholder="Contoh: Jakarta / CGK"
+          value="Jakarta"
+          required
+        >
+      </div>
+
+      <button type="button" class="swap-btn" id="swapBtn">⇄</button>
+
+      <div class="form-group">
+        <label>Ke</label>
+        <input
+          type="text"
+          id="toCity"
+          name="destination"
+          placeholder="Contoh: Bali / DPS"
+          value="Bali"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Tanggal Berangkat</label>
+        <input
+          type="date"
+          id="departDate"
+          name="departure_date"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Penumpang</label>
+        <select id="passenger" name="passenger">
+          <option value="1">1 Dewasa</option>
+          <option value="2">2 Dewasa</option>
+          <option value="3">3 Dewasa</option>
+          <option value="4">1 Dewasa, 1 Anak</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Kelas</label>
+        <select id="flightClass" name="class_type">
+          <option value="Ekonomi">Ekonomi</option>
+          <option value="Premium Ekonomi">Premium Ekonomi</option>
+          <option value="Bisnis">Bisnis</option>
+          <option value="First Class">First Class</option>
+        </select>
+      </div>
+
+      <button type="submit" class="search-btn">
+        Cari Tiket
+      </button>
+    </form>
+  </section>
+
+  <!-- RESULT -->
+  <section class="result-section">
+    <div class="result-header">
+      <h2>Rekomendasi Penerbangan</h2>
+
+      <select id="sortFlight">
+        <option value="cheap">Termurah</option>
+        <option value="early">Berangkat Paling Awal</option>
+      </select>
+    </div>
+
+    <div id="flightResults" class="flight-results">
+      <!-- DATA DARI DATABASE AKAN MUNCUL DI SINI -->
+    </div>
+  </section>
+
+  <!-- MODAL LOGIN -->
+  <div class="modal" id="loginModal">
+    <div class="modal-box">
+      <button class="close-modal" id="closeLogin">×</button>
+
+      <h2>Masuk Akun</h2>
+      <p>Login agar bisa melakukan checkout dan pembayaran.</p>
+
+      <input
+        type="email"
+        id="emailLogin"
+        placeholder="Email"
+      >
+
+      <input
+        type="password"
+        id="passwordLogin"
+        placeholder="Password"
+      >
+
+      <button class="login-submit" id="submitLogin">
+        Masuk
+      </button>
+
+      <button class="register-btn" id="registerBtn">
+        Daftar Akun Baru
+      </button>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="tiket-pesawat.js"></script>
+
+</body>
+</html>

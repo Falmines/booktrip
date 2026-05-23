@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - BookTrip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✈ BookTrip</div>
+  <div class="top-actions">
+    <a href="index.html">Beranda</a>
+  </div>
+</header>
+
+<section class="checkout-page">
+  <div class="checkout-wrapper">
+
+    <div class="checkout-card">
+      <h2>Checkout Pesanan</h2>
+
+      <h3>Data Pemesan</h3>
+
+      <input type="text" id="passengerName" placeholder="Nama lengkap">
+      <input type="text" id="passengerPhone" placeholder="Nomor WhatsApp">
+      <input type="email" id="passengerEmail" placeholder="Email aktif">
+
+      <hr>
+
+      <h3>Catatan Tambahan</h3>
+      <input type="text" id="note" placeholder="Contoh: kursi dekat jendela">
+    </div>
+
+    <div class="checkout-card">
+      <h3>Ringkasan Pesanan</h3>
+
+      <div class="summary-item">
+        <span>Layanan</span>
+        <b id="serviceName">Loading...</b>
+      </div>
+
+      <div class="summary-item">
+        <span>Detail</span>
+        <b id="serviceDetail">Loading...</b>
+      </div>
+
+      <div class="summary-item">
+        <span>Status</span>
+        <b>Belum Dibayar</b>
+      </div>
+
+      <div class="total-box">
+        <small>Total Pembayaran</small>
+        <h2 id="totalPrice">Rp 0</h2>
+      </div>
+
+      <button type="button" class="checkout-btn" id="checkoutBtn">
+        Lanjut ke Pembayaran
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>
